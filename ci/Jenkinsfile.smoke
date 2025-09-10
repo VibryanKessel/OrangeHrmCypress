@@ -18,5 +18,11 @@ pipeline {
         sh './batchs/smoke-test.sh'
       }
     }
+    post{
+        always {
+            junit 'results/**/*.xml'
+            // archiveArtifacts artifacts: 'cypress/reports/**/*.*', followSymlinks: false
+        }
+    }
   }
 }

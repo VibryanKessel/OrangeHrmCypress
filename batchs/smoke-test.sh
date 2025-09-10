@@ -1,1 +1,1 @@
-npx cypress run --env grepTags=@smoke
+npx cypress run --env grepTags=@smoke --reporter junit
